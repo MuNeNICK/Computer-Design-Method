@@ -65,7 +65,7 @@ int main(int argc, char *argv[]) {
 for i in 4 8 16 32 64 128 256 512 1024 2048 4096 8192 16384 32768; do ./cache $i; done
 */
 
-/* 
+/* 学校PC(Intel Core i5-9500)での実行結果
 [m18136@s752-pc020 Computer-Design-Method-main]$ for i in 4 8 16 32 64 128 256 512 1024 2048 4096 8192 16384 32768; do ./a.out $i; done
     4(KB): 1.514490(nsec)
     8(KB): 1.712801(nsec)
@@ -81,4 +81,22 @@ for i in 4 8 16 32 64 128 256 512 1024 2048 4096 8192 16384 32768; do ./cache $i
  8192(KB): 2.702374(nsec)
 16384(KB): 4.474412(nsec)
 32768(KB): 6.149544(nsec)
+*/
+
+/* 自宅サーバ(Intel Xeon D-1815)での実行結果
+root@633a8438f08d:~/.local/share/code-server/User/Workspaces/Computer-Design-Method# for i in 4 8 16 32 64 128 256 512 1024 2048 4096 8192 16384 32768; do ./cache $i; done
+    4(KB): 7.163805(nsec)
+    8(KB): 7.040236(nsec)
+   16(KB): 7.079857(nsec)
+   32(KB): 7.131404(nsec)
+   64(KB): 9.742482(nsec)
+  128(KB): 9.749422(nsec)
+  256(KB): 9.934251(nsec)
+  512(KB): 10.111465(nsec)
+ 1024(KB): 10.317137(nsec)
+ 2048(KB): 10.459252(nsec)
+ 4096(KB): 11.117789(nsec)
+ 8192(KB): 13.327267(nsec)
+16384(KB): 13.605267(nsec)
+32768(KB): 13.243783(nsec)
 */
