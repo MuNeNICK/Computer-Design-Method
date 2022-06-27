@@ -57,10 +57,28 @@ int main(int argc, char *argv[]) {
     clock_gettime(CLOCK_MONOTONIC, &end);
     // 処理時間をnsec単位で得る
     printf("%5d(KB): %f(nsec)\n", size, (double)diff_nsec(start, end)/NLOOP);
-
+    
     return 0;
 }
 
 /* 実行方法
 for i in 4 8 16 32 64 128 256 512 1024 2048 4096 8192 16384 32768; do ./cache $i; done
-/*
+*/
+
+/* 
+[m18136@s752-pc020 Computer-Design-Method-main]$ for i in 4 8 16 32 64 128 256 512 1024 2048 4096 8192 16384 32768; do ./a.out $i; done
+    4(KB): 1.514490(nsec)
+    8(KB): 1.712801(nsec)
+   16(KB): 1.712036(nsec)
+   32(KB): 1.736800(nsec)
+   64(KB): 1.590234(nsec)
+  128(KB): 1.594737(nsec)
+  256(KB): 1.627770(nsec)
+  512(KB): 1.676433(nsec)
+ 1024(KB): 1.672512(nsec)
+ 2048(KB): 1.675302(nsec)
+ 4096(KB): 1.681790(nsec)
+ 8192(KB): 2.702374(nsec)
+16384(KB): 4.474412(nsec)
+32768(KB): 6.149544(nsec)
+*/
