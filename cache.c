@@ -57,6 +57,10 @@ int main(int argc, char *argv[]) {
     clock_gettime(CLOCK_MONOTONIC, &end);
     // 処理時間をnsec単位で得る
     printf("%5d(KB): %f(nsec)\n", size, (double)diff_nsec(start, end)/NLOOP);
-    
+
     return 0;
 }
+
+/* 実行方法
+for i in 4 8 16 32 64 128 256 512 1024 2048 4096 8192 16384 32768; do ./cache $i; done
+/*
