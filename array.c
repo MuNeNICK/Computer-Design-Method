@@ -60,3 +60,8 @@ int main(int argc, char *argv[]) {
     
     return 0;
 }
+
+/*
+root@e6743b3c62bb:/workspace/Computer-Design-Method# ./binaries/array 100
+N = 100:  8.411755(nsec)
+*/
