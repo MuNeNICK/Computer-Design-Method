@@ -54,32 +54,32 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    // n→j→i
-    for (n = 1; n <= loop_count; n++) {
-        for (j = 0; j < MAX_COLUMN; j++) {
-            for (i = 0; i < MAX_ROW; i++) {
-                Matrix[i][j]++;
-            }
-        }
-    }
+    // // n→j→i
+    // for (n = 1; n <= loop_count; n++) {
+    //     for (j = 0; j < MAX_COLUMN; j++) {
+    //         for (i = 0; i < MAX_ROW; i++) {
+    //             Matrix[i][j]++;
+    //         }
+    //     }
+    // }
 
-    // i→j→n
-    for (i = 0; i < MAX_ROW; i++) {
-        for (j = 0; j < MAX_COLUMN; j++) {
-            for (n = 1; n <= loop_count; n++) {
-                Matrix[i][j]++;
-            }
-        }
-    }
+    // // i→j→n
+    // for (i = 0; i < MAX_ROW; i++) {
+    //     for (j = 0; j < MAX_COLUMN; j++) {
+    //         for (n = 1; n <= loop_count; n++) {
+    //             Matrix[i][j]++;
+    //         }
+    //     }
+    // }
 
-    // j→i→n
-    for (j = 0; j < MAX_COLUMN; j++) {
-        for (i = 0; i < MAX_ROW; i++) {
-            for (n = 1; n <= loop_count; n++) {
-                Matrix[i][j]++;
-            }
-        }
-    }
+    // // j→i→n
+    // for (j = 0; j < MAX_COLUMN; j++) {
+    //     for (i = 0; i < MAX_ROW; i++) {
+    //         for (n = 1; n <= loop_count; n++) {
+    //             Matrix[i][j]++;
+    //         }
+    //     }
+    // }
 
     // 処理時間計測終了
     clock_gettime(CLOCK_MONOTONIC, &end);
