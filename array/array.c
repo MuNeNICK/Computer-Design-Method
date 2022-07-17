@@ -45,14 +45,14 @@ int main(int argc, char *argv[]) {
     // Matrix に対する書き込み処理
     // XXX: ここの３重ループの順番を検討する
 
-    // n→i→j
-    for (n = 1; n <= loop_count; n++) {
-        for (i = 0; i < MAX_ROW; i++) {
-            for (j = 0; j < MAX_COLUMN; j++) {
-                Matrix[i][j]++;
-            }
-        }
-    }
+    // // n→i→j
+    // for (n = 1; n <= loop_count; n++) {
+    //     for (i = 0; i < MAX_ROW; i++) {
+    //         for (j = 0; j < MAX_COLUMN; j++) {
+    //             Matrix[i][j]++;
+    //         }
+    //     }
+    // }
 
     // // n→j→i
     // for (n = 1; n <= loop_count; n++) {
@@ -72,14 +72,14 @@ int main(int argc, char *argv[]) {
     //     }
     // }
 
-    // // j→i→n
-    // for (j = 0; j < MAX_COLUMN; j++) {
-    //     for (i = 0; i < MAX_ROW; i++) {
-    //         for (n = 1; n <= loop_count; n++) {
-    //             Matrix[i][j]++;
-    //         }
-    //     }
-    // }
+    // j→i→n
+    for (j = 0; j < MAX_COLUMN; j++) {
+        for (i = 0; i < MAX_ROW; i++) {
+            for (n = 1; n <= loop_count; n++) {
+                Matrix[i][j]++;
+            }
+        }
+    }
 
     // 処理時間計測終了
     clock_gettime(CLOCK_MONOTONIC, &end);
