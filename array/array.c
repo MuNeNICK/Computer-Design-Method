@@ -44,9 +44,38 @@ int main(int argc, char *argv[]) {
 
     // Matrix に対する書き込み処理
     // XXX: ここの３重ループの順番を検討する
+
+    // n→i→j
     for (n = 1; n <= loop_count; n++) {
         for (i = 0; i < MAX_ROW; i++) {
             for (j = 0; j < MAX_COLUMN; j++) {
+                Matrix[i][j]++;
+            }
+        }
+    }
+
+    // n→j→i
+    for (n = 1; n <= loop_count; n++) {
+        for (j = 0; j < MAX_COLUMN; j++) {
+            for (i = 0; i < MAX_ROW; i++) {
+                Matrix[i][j]++;
+            }
+        }
+    }
+
+    // i→j→n
+    for (i = 0; i < MAX_ROW; i++) {
+        for (j = 0; j < MAX_COLUMN; j++) {
+            for (n = 1; n <= loop_count; n++) {
+                Matrix[i][j]++;
+            }
+        }
+    }
+
+    // j→i→n
+    for (j = 0; j < MAX_COLUMN; j++) {
+        for (i = 0; i < MAX_ROW; i++) {
+            for (n = 1; n <= loop_count; n++) {
                 Matrix[i][j]++;
             }
         }
@@ -61,7 +90,22 @@ int main(int argc, char *argv[]) {
     return 0;
 }
 
-/*
+/* n→i→j
 root@e6743b3c62bb:/workspace/Computer-Design-Method# ./binaries/array 100
 N = 100:  8.411755(nsec)
+*/
+
+/* n→j→i
+root@867e318c8197:/workspace/Computer-Design-Method# ./binaries/array2 100
+N = 100: 24.404816(nsec)
+*/
+
+/* i→j→n
+root@867e318c8197:/workspace/Computer-Design-Method# ./binaries/array3 100
+N = 100: 15.391083(nsec)
+*/
+
+/* j→i→n
+root@867e318c8197:/workspace/Computer-Design-Method# ./binaries/array4 100
+N = 100:  6.794386(nsec)
 */
